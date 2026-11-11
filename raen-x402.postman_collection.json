@@ -1,0 +1,705 @@
+{
+  "info": {
+    "name": "RAEN x402 Fleet \u2014 12 pay-per-call APIs on Base",
+    "_postman_id": "bda3e396-8dc4-4b10-822f-e0640d5f2bab",
+    "description": "One-click import: run every RAEN x402 API from Postman (also works in Insomnia and Bruno via OpenAPI import).\n\n**How x402 works:** paid endpoints return HTTP 402 with a base64 `payment-required` header containing a signed challenge. Click any paid request WITHOUT paying \u2014 you get the challenge for free. Settle it with an x402 client (USDC on Base, eip155:8453), then resend with the `X-PAYMENT` header to get the real result.\n\nFree first call on royal-ruby (charge-and-rebate, net $0): https://bshelby88.github.io/raen-first-call-free/\nInteractive docs: https://raen-api-docs.vercel.app/  \u2022  MCP gateway: https://raen-mcp-gateway.fly.dev/mcp (Bearer-gated)\nOperator: Royal Agentic Enterprises (RAEN) \u2014 ops@royalruby.io",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "royal-ruby \u2014 law lookup (FREE FIRST CALL)",
+      "item": [
+        {
+          "name": "US consumer-rights law citation lookup (FREE FIRST CALL)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://royal-ruby-x402.fly.dev/api/law-lookup",
+              "protocol": "https",
+              "host": [
+                "royal-ruby-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "law-lookup"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"topic\": \"credit report errors\",\n  \"state\": \"TX\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "vault-pro \u2014 Obsidian scaffolds",
+      "item": [
+        {
+          "name": "Obsidian project scaffold",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://vault-pro-x402.fly.dev/api/scaffold-project",
+              "protocol": "https",
+              "host": [
+                "vault-pro-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "scaffold-project"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"goal\": \"launch a newsletter\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Obsidian agent definition scaffold",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://vault-pro-x402.fly.dev/api/scaffold-agent",
+              "protocol": "https",
+              "host": [
+                "vault-pro-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "scaffold-agent"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"role\": \"researcher\",\n  \"goal\": \"track fintech news\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "escrow \u2014 agent-to-agent escrow",
+      "item": [
+        {
+          "name": "Create agent-to-agent USDC escrow on Base mainnet",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://escrow-x402.fly.dev/api/escrow/create",
+              "protocol": "https",
+              "host": [
+                "escrow-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "escrow",
+                "create"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"agentB\": \"0x0000000000000000000000000000000000000000\",\n  \"amountUsdc\": 0.05,\n  \"task\": \"demo task\",\n  \"timeoutHours\": 24\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nanobanana \u2014 AI images",
+      "item": [
+        {
+          "name": "Generate an AI image from a text prompt",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://nanobanana-x402.fly.dev/api/generate-image",
+              "protocol": "https",
+              "host": [
+                "nanobanana-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "generate-image"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"prompt\": \"a lighthouse at dawn, watercolor\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Edit an existing image with a natural-language prompt",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://nanobanana-x402.fly.dev/api/edit-image",
+              "protocol": "https",
+              "host": [
+                "nanobanana-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "edit-image"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"source\": \"https://example.com/img.png\",\n  \"prompt\": \"make it night\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tradingagents \u2014 market consensus",
+      "item": [
+        {
+          "name": "Synthetic ticker market-consensus demo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://tradingagents-x402.fly.dev/api/analyze-ticker",
+              "protocol": "https",
+              "host": [
+                "tradingagents-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "analyze-ticker"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ticker\": \"AAPL\",\n  \"analysts\": 5\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Synthetic BlockRun arbitrage-consensus demo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://tradingagents-x402.fly.dev/api/analyze-arbitrage",
+              "protocol": "https",
+              "host": [
+                "tradingagents-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "analyze-arbitrage"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ticker\": \"ETH\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "dispute-forge \u2014 dispute letters",
+      "item": [
+        {
+          "name": "FCRA-compliant dispute letter + on-chain certificate",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://dispute-forge-x402.fly.dev/api/dispute-pack",
+              "protocol": "https",
+              "host": [
+                "dispute-forge-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "dispute-pack"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"creditor\": \"Example Collections LLC\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nft-alpha \u2014 NFT signals",
+      "item": [
+        {
+          "name": "Live OpenSea market signals for Base NFT collections",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "https://nft-alpha-x402.fly.dev/api/nft-signal",
+              "protocol": "https",
+              "host": [
+                "nft-alpha-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "nft-signal"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge."
+          }
+        }
+      ]
+    },
+    {
+      "name": "dispatch \u2014 intent router",
+      "item": [
+        {
+          "name": "Route a natural-language agent intent to the right paid fleet service",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://dispatch-x402.fly.dev/dispatch",
+              "protocol": "https",
+              "host": [
+                "dispatch-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "dispatch"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"intent\": \"summarize this contract for risky clauses\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "contract-eye \u2014 contract risk",
+      "item": [
+        {
+          "name": "Analyze contract text for risky or one-sided clauses",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://contract-eye-x402.fly.dev/api/analyze-contract",
+              "protocol": "https",
+              "host": [
+                "contract-eye-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "analyze-contract"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"The Provider may terminate this agreement at any time, for any reason, without notice.\",\n  \"focus\": \"termination\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "briefsnap \u2014 document AI",
+      "item": [
+        {
+          "name": "Summarize a document (bullets, paragraph, or executive)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://briefsnap-x402.fly.dev/api/summarize",
+              "protocol": "https",
+              "host": [
+                "briefsnap-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "summarize"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"Paste any long document here.\",\n  \"format\": \"bullets\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Extract action items, decisions, and deadlines",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://briefsnap-x402.fly.dev/api/extract-actions",
+              "protocol": "https",
+              "host": [
+                "briefsnap-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "extract-actions"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"Paste meeting notes here.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Plain-English explanation of complex text",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://briefsnap-x402.fly.dev/api/eli5",
+              "protocol": "https",
+              "host": [
+                "briefsnap-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "eli5"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"text\": \"Paste dense text here.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Compare two documents side by side",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://briefsnap-x402.fly.dev/api/compare-docs",
+              "protocol": "https",
+              "host": [
+                "briefsnap-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "compare-docs"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge.",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"doc_a\": \"Draft A text\",\n  \"doc_b\": \"Draft B text\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sentry-forge \u2014 collection-notice defense",
+      "item": [
+        {
+          "name": "Turn a debt-collection notice into an 8-file validation pack",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://sentry-forge-x402.fly.dev/api/dispute-pack",
+              "protocol": "https",
+              "host": [
+                "sentry-forge-x402",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "dispute-pack"
+              ]
+            },
+            "description": "PAID endpoint \u2014 expect HTTP 402 Payment Required without an X-PAYMENT header. Decode the base64 `payment-required` response header to read the challenge (accepts[].payTo / maxAmountRequired), settle it with any x402 client, then retry with X-PAYMENT. Clicking this request without payment is FREE \u2014 it only fetches the challenge."
+          }
+        }
+      ]
+    },
+    {
+      "name": "FREE \u2014 telemetry & proof (no payment)",
+      "item": [
+        {
+          "name": "Fleet health probe (free, no payment)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://settlement-collector.fly.dev/health",
+              "protocol": "https",
+              "host": [
+                "settlement-collector",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "health"
+              ]
+            },
+            "description": "FREE endpoint \u2014 no payment required. Run it as-is."
+          }
+        },
+        {
+          "name": "Live challenge/settlement telemetry (free, no payment)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://settlement-collector.fly.dev/stats",
+              "protocol": "https",
+              "host": [
+                "settlement-collector",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "stats"
+              ]
+            },
+            "description": "FREE endpoint \u2014 no payment required. Run it as-is."
+          }
+        },
+        {
+          "name": "Proof-of-commerce page (free)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://settlement-collector.fly.dev/proof",
+              "protocol": "https",
+              "host": [
+                "settlement-collector",
+                "fly",
+                "dev"
+              ],
+              "path": [
+                "proof"
+              ]
+            },
+            "description": "FREE endpoint \u2014 no payment required. Run it as-is."
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "payer_address",
+      "value": "",
+      "type": "string",
+      "description": "Your 0x wallet \u2014 required for the FREE FIRST CALL rebate on royal-ruby (header x-payer-address)"
+    }
+  ]
+}
