@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Run the RAEN x402 API Fleet in Postman — one-click import</title>
+<meta name="description" content="Import a ready-made Postman collection covering all 12 RAEN x402 pay-per-call APIs on Base. Click any paid endpoint to fetch a real 402 challenge for free — pay only when you call for real.">
+<style>
+:root{color-scheme:dark}
+body{font-family:ui-sans-serif,system-ui,sans-serif;background:#0b0e14;color:#e6edf3;max-width:820px;margin:0 auto;padding:2rem 1.25rem;line-height:1.6}
+a{color:#58d3ff}
+code,pre{font-family:ui-monospace,Consolas,monospace;background:#151b26;border:1px solid #2a3444;border-radius:6px;padding:.1em .35em}
+pre{padding:.9rem;overflow-x:auto}
+.btn{display:inline-block;background:#1f6feb;color:#fff;padding:.65rem 1.2rem;border-radius:8px;text-decoration:none;font-weight:600;margin:.25rem .5rem .25rem 0}
+.btn.alt{background:#238636}
+h1{font-size:1.7rem}h2{border-bottom:1px solid #2a3444;padding-bottom:.3rem;margin-top:2rem}
+.note{background:#12233b;border-left:3px solid #58d3ff;padding:.75rem 1rem;border-radius:6px}
+.kbd{background:#1a2230;border:1px solid #3a4a5f;border-radius:4px;padding:0 .4em;font-size:.85em}
+ul.services{columns:2;gap:2rem}
+@media(max-width:600px){ul.services{columns:1}}
+</style>
+</head>
+<body>
+<h1>⚡ Run the RAEN x402 fleet in Postman</h1>
+<p>One JSON file. <strong>12 pay-per-call APIs on Base mainnet</strong>, every request pre-built with example bodies and honest 402 documentation.</p>
+<p>
+  <a class="btn" href="./raen-x402.postman_collection.json" download>Download collection JSON</a>
+  <a class="btn alt" href="https://raw.githubusercontent.com/bshelby88/raen-postman/main/raen-x402.postman_collection.json" target="_blank" rel="noopener">Raw JSON (for import URL)</a>
+</p>
+<div class="note">
+  <strong>How to import:</strong> Postman → <span class="kbd">Import</span> → paste the raw JSON URL above. Works in
+  <strong>Insomnia</strong> and <strong>Bruno</strong> too (or import the <a href="https://raen-api-docs.vercel.app/openapi.yaml">OpenAPI spec</a> directly).
+</div>
+<h2>What you get</h2>
+<ul class="services">
+  <li><code>royal-ruby</code> — law lookup <em>(free first call, net $0)</em></li>
+  <li><code>vault-pro</code> — Obsidian scaffolds</li>
+  <li><code>escrow</code> — agent-to-agent USDC escrow</li>
+  <li><code>nanobanana</code> — AI image gen &amp; edit</li>
+  <li><code>tradingagents</code> — market consensus demos</li>
+  <li><code>dispute-forge</code> — dispute letters</li>
+  <li><code>nft-alpha</code> — Base NFT signals</li>
+  <li><code>dispatch</code> — natural-language intent router</li>
+  <li><code>contract-eye</code> — contract risk analysis</li>
+  <li><code>briefsnap</code> — document AI (4 tools)</li>
+  <li><code>sentry-forge</code> — collection-notice defense</li>
+  <li><code>settlement-collector</code> — free telemetry &amp; proof</li>
+</ul>
+<h2>Clicking a paid request costs nothing</h2>
+<p>Every paid endpoint returns <strong>HTTP 402 Payment Required</strong> with a base64 <code>payment-required</code> header containing a signed challenge. Hit the request in Postman → decode the header → you see exactly who gets paid (<code>payTo</code>), how much, and through which facilitator. Settle with any x402 client (USDC on Base, <code>eip155:8453</code>) and resend with <code>X-PAYMENT</code> to get the real result.</p>
+<h2>Links</h2>
+<ul>
+  <li>Interactive docs: <a href="https://raen-api-docs.vercel.app/">raen-api-docs.vercel.app</a></li>
+  <li>Free first call (net $0): <a href="https://bshelby88.github.io/raen-first-call-free/">raen-first-call-free</a></li>
+  <li>MCP gateway (for agents): <code>https://raen-mcp-gateway.fly.dev/mcp</code> (Bearer-gated)</li>
+  <li>Live fleet telemetry: <a href="https://settlement-collector.fly.dev/stats">/stats</a></li>
+</ul>
+<p style="color:#8b949e;font-size:.9em">Royal Agentic Enterprises (RAEN) · <a href="mailto:ops@royalruby.io">ops@royalruby.io</a> · Information only, not legal or financial advice.</p>
+</body>
+</html>
